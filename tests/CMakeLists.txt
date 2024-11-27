@@ -2,7 +2,7 @@
 
 include(Catch)
 
-add_executable("UnitTestfunctions" "test_functions.cpp")
+add_executable("UnitTestfunctions" "tests.cpp")
 target_link_libraries("UnitTestfunctions" PUBLIC "Libfunctions")
 target_link_libraries("UnitTestfunctions" PRIVATE Catch2::Catch2WithMain)
 
