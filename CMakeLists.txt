@@ -50,15 +50,7 @@ endif()
 
 add_cmake_format_target()
 add_clang_format_target()
-# aqui
-if(ENABLE_TESTING AND ENABLE_COVERAGE)
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
-    setup_target_for_coverage_cobertura(
-        NAME coverage
-        EXECUTABLE ctest --output-on-failure
-        DEPENDENCIES tests
-    )
+
 endif()
 if(ENABLE_SANITIZE_ADDR
    OR ENABLE_SANITIZE_UNDEF
