@@ -20,11 +20,6 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones disabled for better analysis relevancy
 
-      # Build the project using SonarQube's build wrapper
-      - name: Build Wrapper for Tests
-        run: |
-          build-wrapper-linux-x86-64 --out-dir bw-output cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug
-          build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build
 
       # Run tests and generate coverage report
       - name: Run Tests and Generate Coverage
